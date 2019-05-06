@@ -1,5 +1,6 @@
 <% include partials/header %>
-<div class="container">
+
+<div class="container pt-4">
   <header class="jumbotron">
     <div class="container">
       <h1>Welcome to YelpCamp!</h1>
@@ -20,7 +21,7 @@
     <% campgrounds.forEach(ele => { %>
     <div class="col-md-3 col-sm-6 d-flex">
       <div class="card">
-        <img src="<%= ele.image %>"class="card-img-top h-75">
+        <img src="<%= ele.image %>" class="card-img-top h-75">
         <div class="card-body">
           <h4>
             <%= ele.name %>
