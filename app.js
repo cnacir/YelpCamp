@@ -4,10 +4,14 @@ const bodyParser = require('body-parser');
 let campgrounds = [
 	{name: "Salmon Creek", image: "https://www.photosforclass.com/download/flickr-7626464792"},
 	{name: "Granite Hill", image: "https://www.photosforclass.com/download/flickr-321487195"},
+	{name: "Mountain Goat Rest", image: "https://farm4.staticflickr.com/3130/2770459706_3aed20703e.jpg"},
+	{name: "Salmon Creek", image: "https://www.photosforclass.com/download/flickr-7626464792"},
+	{name: "Granite Hill", image: "https://www.photosforclass.com/download/flickr-321487195"},
 	{name: "Mountain Goat Rest", image: "https://farm4.staticflickr.com/3130/2770459706_3aed20703e.jpg"}
 ]
 
 app.set("view engine", "ejs");
+app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", (req, res) => {
