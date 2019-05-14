@@ -1,6 +1,8 @@
-const express = require('express');
-const app = express();
-const bodyParser = require('body-parser');
+const express = require('express'),
+			app = express(),
+			bodyParser = require('body-parser'),
+ 			mongoose = require("mongoose");
+
 let campgrounds = [
 	{name: "Salmon Creek", image: "https://www.photosforclass.com/download/flickr-7626464792"},
 	{name: "Granite Hill", image: "https://www.photosforclass.com/download/flickr-321487195"},
