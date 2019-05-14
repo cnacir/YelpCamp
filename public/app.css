@@ -1,4 +1,9 @@
-[class*="col-"] {
-  /* padding-bottom: -6rem !important; */
+[class*="col-*"], .card-spacing {
   margin-bottom: -6rem !important;
+}
+
+[class*="card"], [class*="card-img-top"] {
+  min-height: 15rem;
+  max-height: 30rem;
+  max-width: auto;
 }
