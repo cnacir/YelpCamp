@@ -20,13 +20,16 @@
   <div class="row text-center mt-3">
     <% campgrounds.forEach(ele => { %>
     <div class="col-md-3 col-sm-6 no-gutters card-spacing">
-      <div class="card h-75">
-        <img src="<%= ele.image %>" class="card-img-top h-75">
+      <div class="card h-100 text-center">
+        <img src="<%= ele.image %>" class="card-img-top img-fluid img-thumbnail">
         <div class="card-body">
-          <h4>
+          <h4 class="card-title">
             <%= ele.name %>
           </h4>
-        </div>
+				</div>
+				<div class="card-footer">
+          <a href="/campgrounds/<%= ele._id %>" class="btn btn-primary">More Info</a>
+				</div>
       </div>
     </div>
     <% }); %>

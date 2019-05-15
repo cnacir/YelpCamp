@@ -1,9 +1,12 @@
-[class*="col-*"], .card-spacing {
-  margin-bottom: -6rem !important;
+/* [class*="col-*"], .card-spacing {
+  margin-bottom: -3.5rem !important;
+} */
+[class*="card-img-top"] {
+  width: auto;
+  height: 20rem;
+  object-fit: cover;
 }
 
-[class*="card"], [class*="card-img-top"] {
-  min-height: 15rem;
-  max-height: 30rem;
-  max-width: auto;
-}
+/* [class*="card"] {
+  max-height: 50vh;
+} */

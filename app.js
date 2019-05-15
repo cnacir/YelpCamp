@@ -11,7 +11,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 const campgroundSchema = new mongoose.Schema({
 	name: String,
-	image: String
+	image: String,
+	description: String
 });
 
 const Campground = mongoose.model("Campground", campgroundSchema);
@@ -20,7 +21,18 @@ const Campground = mongoose.model("Campground", campgroundSchema);
 // Campground.create(
 // 	{
 // 		name: "Salmon Creek",
-// 		image: "https://www.photosforclass.com/download/flickr-7626464792"
+// 		image: "https://www.photosforclass.com/download/flickr-7626464792",
+// 		description: "A creek where salmon like to swim."
+// 	},
+// 	{
+// 		name: "Granite Hill",
+// 		image: "https://www.photosforclass.com/download/flickr-321487195",
+// 		description: "A hill made of granite"
+// 	},
+// 	{
+// 		name: "Mountain Goat Rest",
+// 		image: "https://farm4.staticflickr.com/3130/2770459706_3aed20703e.jpg",
+// 		description: "A popular resting place for mountain goats"
 // 	}, (err, campground) => {
 // 		if(err) {
 // 			console.log(err);
@@ -72,6 +84,10 @@ app.post("/campgrounds", (req, res) => {
 
 app.get("/campgrounds/new", (req, res) => {
 	res.render("new.ejs");
+});
+
+app.get("/campgrounds/:id", (req, res) => {
+	res.render("show");
 });
 
 app.listen(3000, () => console.log("Camp has started!"));
